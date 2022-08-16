@@ -42,10 +42,10 @@ export class UsersRepository implements IUsersRepository {
         u.last_name
         FROM users AS u
       WHERE
-        u.first_name = $1
+        u.first_name ILIKE $1
       AND
-        u.last_name = $2`,
-      [first_name, last_name]
+        u.last_name ILIKE $2`,
+      [`%${first_name}%`, `%${last_name}%`]
     );
   }
 }

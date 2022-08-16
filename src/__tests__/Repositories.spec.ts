@@ -138,8 +138,8 @@ describe("Repositories", () => {
 
   it("[UsersRepository] should be able to find user by full name", async () => {
     const result1 = await usersRepository.findUserByFullName({
-      first_name: "Vinicius",
-      last_name: "Fraga",
+      first_name: "VinIcIus",
+      last_name: "fRAga",
     });
 
     const result2 = await usersRepository.findUserByFullName({
